@@ -16,5 +16,5 @@ exports.run = function(msg, args) {
 }
 
 exports.info = function() {
-	return "!checkcommands <command> - Check command JS code"
+	return "!checkcommand <command> - Check command JS code"
 }
