@@ -1,6 +1,6 @@
-let kuro
+let TentenBot
 exports.init = function (bot) {
-	kuro = bot
+	TentenBot = bot
 }
 
 exports.run = function (msg, args) {
@@ -10,4 +10,8 @@ exports.run = function (msg, args) {
 			`Pong! (took: ${message.createdTimestamp - msg.createdTimestamp}ms)`
 		)
 	})
+}
+
+exports.info = function() {
+	return "!ping - Ping test"
 }

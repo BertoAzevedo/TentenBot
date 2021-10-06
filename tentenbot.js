@@ -15,6 +15,8 @@ client.on("ready", () => {
 client.on("message", async (msg) => {
 	if (!msg.content.startsWith(config.prefix)) return
 
+	if(msg.author.bot) return
+
 	// Get all the arguments
 	let tmp = msg.content.substring(config.prefix.length, msg.length).split(" ")
 	let args = []
