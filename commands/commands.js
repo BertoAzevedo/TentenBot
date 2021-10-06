@@ -10,10 +10,7 @@ exports.run = function (msg, args) {
 			info += "\n" + value.info()
 		}
 	}
-	if(info !== "")
-	{
-		return msg.channel.send(`\n${info}\n`)
-	}
+	return msg.channel.send(`\n${info}\n`)
 }
 
 exports.info = function () {
