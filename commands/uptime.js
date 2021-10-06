@@ -1,6 +1,6 @@
-let kuro
+let TentenBot
 exports.init = function (bot) {
-	kuro = bot
+	TentenBot = bot
 }
 
 exports.run = function (msg) {
@@ -8,9 +8,13 @@ exports.run = function (msg) {
 		embed: {
 			title: "Bot",
 			description: `Uptime: ${secondsToString(process.uptime())}`,
-			color: kuro.config.embedColor
+			color: TentenBot.config.embedColor
 		}
 	})
+}
+
+exports.info = function () {
+	return "!uptime - Check TentenBot uptime"
 }
 
 function secondsToString(seconds) {

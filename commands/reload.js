@@ -1,6 +1,13 @@
-let kuro
-exports.init = function(bot) { kuro = bot }
-exports.run = function(msg) {
+let TentenBot
+exports.init = function (bot) {
+	TentenBot = bot
+}
+
+exports.run = function (msg) {
 	msg.delete()
-	kuro.loadCommands()
+	TentenBot.loadCommands()
+}
+
+exports.info = function () {
+	return "!reload - Reload modules"
 }

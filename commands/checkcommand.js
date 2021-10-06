@@ -1,16 +1,20 @@
-let kuro
-exports.init = function(bot) { kuro = bot }
+let TentenBot
+exports.init = function(bot) { TentenBot = bot }
 
 exports.run = function(msg, args) {
-	if (args.length === 0) return kuro.edit(msg, 'You need to provide a file', 1000)
+	if (args.length === 0) return TentenBot.edit(msg, 'You need to provide a file', 1000)
 
 	try {
 		require('fs').readFile(`./commands/${args}.js`, 'utf-8', (err, data) => {
-			if (err) return kuro.error(err)
+			if (err) return TentenBot.error(err)
 			return msg.channel.send(`**__Overview of ${args}.js__**\n\`\`\`javascript\n${data}\n\`\`\``)
 		})
 	} catch (err) {
-		kuro.error(err)
-		return kuro.edit(msg, `Error \n${err}`)
+		TentenBot.error(err)
+		return TentenBot.edit(msg, `Error \n${err}`)
 	}
+}
+
+exports.info = function() {
+	return "!checkcommands <command> - Check command JS code"
 }

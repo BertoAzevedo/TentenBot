@@ -1,6 +1,6 @@
-let kuro
+let TentenBot
 exports.init = function (bot) {
-	kuro = bot
+	TentenBot = bot
 }
 
 exports.run = function (msg, args) {
