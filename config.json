@@ -1,0 +1,11 @@
+{
+    "token":"ODk0NTQyNTA2ODkxNTU4OTEy.YVrhoQ.ZF1piDR7SlKj86ucRIW3_GYPnLg",
+    "prefix":"!",
+    "language":"en",
+	"commandError": {
+		"sendToModule": true,
+		"module": "s",
+		"function": "run"
+	},
+	"embedColor": 15473237
+}
