@@ -1,13 +1,6 @@
 .DS_Store
 node_modules/
-#files/
-#stickers/
 .eslintrc.json
 config.js
 config.json
-#db
 npm-debug.log
-
-# Commands people shouldn't have :araragi:
-commands/listdevices.js
-

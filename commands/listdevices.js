@@ -6,7 +6,7 @@ exports.init = function (bot) {
 }
 
 exports.run = function (msg, args) {
-	let output = executeShellScript("../../../scripts/listdevices.sh")
+	let output = executeShellScript("../scripts/listdevices.sh")
 	msg.channel.send(output)
 }
 
