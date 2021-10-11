@@ -1,4 +1,4 @@
-const { executeShellScript } = require("../utils/execshellscript.js")
+const { executeShellScript } = require("../utils/utils.js")
 
 let TentenBot
 exports.init = function (bot) {

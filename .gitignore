@@ -9,5 +9,5 @@ config.json
 npm-debug.log
 
 # Commands people shouldn't have :araragi:
-#commands/radio.js
+commands/listdevices.js
 

@@ -1,10 +1,10 @@
 const { exec } = require("child_process")
 
-export default function executeShellScript(filepath) {
+module.exports.executeShellScript = function (filepath) {
 	let stdoutResult = ""
 	let stderrResult = ""
 
-	var yourscript = exec(filepath, (error, stdout, stderr) => {
+	exec(filepath, (error, stdout, stderr) => {
 		stdoutResult = stdout
 		stderrResult = stderr
 		if (error !== null) {
