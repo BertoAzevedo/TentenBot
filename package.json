@@ -9,8 +9,7 @@
   "author": "Berto Azevedo",
   "license": "ISC",
   "dependencies": {
-    "bufferutil": "^4.0.4",
-    "discord.js": "^13.2.0",
-    "utf-8-validate": "^5.0.6"
+    "@discordjs/voice": "^0.6.0",
+    "discord.js": "^13.2.0"
   }
 }
