@@ -1,8 +1,3 @@
-let TentenBot
-exports.init = function (bot) {
-	TentenBot = bot
-}
-
 exports.run = function (msg, args) {
 	msg.delete()
 	msg.channel.send("Ping?").then((message) => {

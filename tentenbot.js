@@ -1,8 +1,10 @@
 const fs = require("fs")
-const { Client, Intents } = require('discord.js');
+const { Client, Intents } = require("discord.js")
 
 const config = JSON.parse(fs.readFileSync("config.json"))
-const client = new Client({ intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES] });
+const client = new Client({
+	intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES]
+})
 
 client.on("ready", () => {
 	console.log("Setting up configs...")
@@ -13,9 +15,11 @@ client.on("ready", () => {
 })
 
 client.on("message", async (msg) => {
+	// Ignore message if it doenst start with specified prefix
 	if (!msg.content.startsWith(config.prefix)) return
 
-	if(msg.author.bot) return
+	// Ignore message if its from bot
+	if (msg.author.bot) return
 
 	// Get all the arguments
 	let tmp = msg.content.substring(config.prefix.length, msg.length).split(" ")
@@ -32,11 +36,7 @@ client.on("message", async (msg) => {
 
 	if (client.modules.hasOwnProperty(cmd))
 		return client.modules[cmd].run(msg, args)
-	if (config.commandError.sendToModule === true) {
-		return client.modules[config.commandError.module][
-			config.commandError.function
-		](msg, cmd)
-	}
+
 	return msg.delete()
 })
 

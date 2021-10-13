@@ -1,11 +1,4 @@
 {
     "token":"",
-    "prefix":"!",
-    "language":"en",
-	"commandError": {
-		"sendToModule": true,
-		"module": "s",
-		"function": "run"
-	},
-	"embedColor": 15473237
+    "prefix":"!"
 }

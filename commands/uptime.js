@@ -1,16 +1,5 @@
-let TentenBot
-exports.init = function (bot) {
-	TentenBot = bot
-}
-
 exports.run = function (msg) {
-	msg.channel.send("", {
-		embed: {
-			title: "Bot",
-			description: `Uptime: ${secondsToString(process.uptime())}`,
-			color: TentenBot.config.embedColor
-		}
-	})
+	msg.channel.send(`Uptime: ${secondsToString(process.uptime())}`)
 }
 
 exports.info = function () {

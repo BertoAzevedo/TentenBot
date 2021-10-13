@@ -1,11 +1,11 @@
-let TentenBot
+let client
 exports.init = function (bot) {
-	TentenBot = bot
+	client = bot
 }
 
 exports.run = function (msg, args) {
 	let info = ""
-	for (var [key, value] of Object.entries(TentenBot.modules)) {
+	for (var [key, value] of Object.entries(client.modules)) {
 		if (value.hasOwnProperty("info")) {
 			info += "\n" + value.info()
 		}

@@ -1,11 +1,11 @@
-let TentenBot
+let client
 exports.init = function (bot) {
-	TentenBot = bot
+	client = bot
 }
 
 exports.run = function (msg) {
 	msg.delete()
-	TentenBot.loadCommands()
+	client.loadCommands()
 }
 
 exports.info = function () {
