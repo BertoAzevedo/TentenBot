@@ -24,9 +24,18 @@ exports.run = function (msg, args) {
 			})
 			break
 		case "leave":
-			msg.channel.send("Ohh... ok... Sadge")
-			if (connection !== null) connection.destroy()
-			break
+			if(!connection)
+			{
+				msg.channel.send("But i'm not in your voice channel...")
+				break
+			}
+			else
+			{
+				msg.channel.send("Ohh... ok... Sadge")
+				if (connection !== null) connection.destroy()
+				connection = null
+				break
+			}
 		default:
 			break
 	}
