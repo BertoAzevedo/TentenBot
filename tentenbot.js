@@ -1,8 +1,8 @@
 const fs = require("fs")
-const Discord = require('discord.js')
+const { Client, Intents } = require('discord.js');
 
 const config = JSON.parse(fs.readFileSync("config.json"))
-const client = new Discord.Client()
+const client = new Client({ intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES] });
 
 client.on("ready", () => {
 	console.log("Setting up configs...")
