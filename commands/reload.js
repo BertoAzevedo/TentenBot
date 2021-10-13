@@ -4,8 +4,8 @@ exports.init = function (bot) {
 }
 
 exports.run = function (msg) {
-	msg.delete()
 	client.loadCommands()
+	msg.channel.send("Modules loaded and ready!")
 }
 
 exports.info = function () {

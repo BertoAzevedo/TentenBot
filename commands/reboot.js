@@ -1,5 +1,5 @@
 exports.run = function(msg) {
-	msg.delete().then(() => process.exit(1))
+	msg.channel.send("Beep Boop, rebooting...").then(() => process.exit(1))
 }
 
 exports.info = function() {
