@@ -3,7 +3,7 @@ const { Client, Intents } = require("discord.js")
 
 const config = JSON.parse(fs.readFileSync("config.json"))
 const client = new Client({
-	intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES]
+	intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES, Intents.FLAGS.GUILD_VOICE_STATES]
 })
 
 client.on("ready", () => {
@@ -36,8 +36,6 @@ client.on("message", async (msg) => {
 
 	if (client.modules.hasOwnProperty(cmd))
 		return client.modules[cmd].run(msg, args)
-
-	return msg.delete()
 })
 
 client.loadCommands = function () {
